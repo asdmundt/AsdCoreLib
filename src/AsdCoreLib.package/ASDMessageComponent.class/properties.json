@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "<historical>",
+	"super" : "WAComponent",
+	"category" : "AsdCoreLib-Components",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"messageString",
+		"messageType",
+		"wasShown"
+	],
+	"name" : "ASDMessageComponent",
+	"type" : "normal"
+}

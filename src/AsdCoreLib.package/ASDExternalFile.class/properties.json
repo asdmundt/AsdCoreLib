@@ -1,0 +1,16 @@
+{
+	"commentStamp" : "sm 5/7/2019 15:10",
+	"super" : "MAFileModel",
+	"category" : "AsdCoreLib-Core",
+	"classinstvars" : [
+		"upLoadedFileName"
+	],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"filepath",
+		"url"
+	],
+	"name" : "ASDExternalFile",
+	"type" : "normal"
+}

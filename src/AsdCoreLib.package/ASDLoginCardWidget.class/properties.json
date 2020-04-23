@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "MDLLoginWidget",
+	"category" : "AsdCoreLib-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "ASDLoginCardWidget",
+	"type" : "normal"
+}

@@ -1,0 +1,1 @@
+Unterklasse  für MAToManyRelationDescription für einen Material-Design Report
