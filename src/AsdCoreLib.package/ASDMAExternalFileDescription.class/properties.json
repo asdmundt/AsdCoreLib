@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "<historical>",
+	"super" : "MAElementDescription",
+	"category" : "AsdCoreLib-Magritte",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "ASDMAExternalFileDescription",
+	"type" : "normal"
+}

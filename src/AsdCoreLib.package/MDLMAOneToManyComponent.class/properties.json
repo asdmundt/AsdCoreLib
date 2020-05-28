@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "MAOneToManyComponent",
+	"category" : "AsdCoreLib-Magritte",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "MDLMAOneToManyComponent",
+	"type" : "normal"
+}

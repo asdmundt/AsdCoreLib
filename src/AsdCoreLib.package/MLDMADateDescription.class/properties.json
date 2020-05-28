@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "MAMagnitudeDescription",
+	"category" : "AsdCoreLib-Magritte",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "MLDMADateDescription",
+	"type" : "normal"
+}

@@ -8,7 +8,8 @@
 	"instvars" : [
 		"messageString",
 		"messageType",
-		"wasShown"
+		"wasShown",
+		"messageColor"
 	],
 	"name" : "ASDMessageComponent",
 	"type" : "normal"

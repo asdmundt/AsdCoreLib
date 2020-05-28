@@ -1,7 +1,7 @@
-as yet unclassified
+accessing
 errorMessage: aString
-
- self
-  messageString: aString;
-  messageType: 'error';
-  wasShown: false.
+	self
+		messageString: aString;
+		messageType: 'error';
+		messageColor: '#e60016';
+		wasShown: false
