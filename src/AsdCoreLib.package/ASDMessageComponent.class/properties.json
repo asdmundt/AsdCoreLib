@@ -9,7 +9,9 @@
 		"messageString",
 		"messageType",
 		"wasShown",
-		"messageColor"
+		"messageColor",
+		"isAjax",
+		"domId"
 	],
 	"name" : "ASDMessageComponent",
 	"type" : "normal"

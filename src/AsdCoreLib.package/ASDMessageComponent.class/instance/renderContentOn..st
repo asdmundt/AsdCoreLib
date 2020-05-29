@@ -1,6 +1,6 @@
 rendering
 renderContentOn: html
-	self wasShown
+self wasShown
 		ifTrue: [ ^ self ].
 	html div
 		style:
@@ -26,3 +26,5 @@ renderContentOn: html
 	background-color: ',self messageColor ,';';
 		with: self messageString.
 	self wasShown: true
+	
+	
