@@ -8,6 +8,6 @@
 	"instvars" : [
 		"date"
 	],
-	"name" : "ASDBDateTextInputComponent",
+	"name" : "MLDMADateTextInputComponent",
 	"type" : "normal"
 }

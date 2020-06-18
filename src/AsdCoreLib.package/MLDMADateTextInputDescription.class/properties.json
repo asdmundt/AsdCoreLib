@@ -6,6 +6,6 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [ ],
-	"name" : "MLDMADateDescription",
+	"name" : "MLDMADateTextInputDescription",
 	"type" : "normal"
 }
