@@ -1,14 +1,11 @@
 rendering
 renderContentOn: html
-self wasShown
+	self wasShown
 		ifTrue: [ ^ self ].
 	html div
 		style:
-			'position: fixed;
-    bottom: 0;
-    left: 50%;
+			'position: relativ;
     cursor: default;
-    z-index: 3;
     display: block;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -23,8 +20,6 @@ self wasShown
     transition: transform .25s cubic-bezier(.4,0,1,1);
     transition: transform .25s cubic-bezier(.4,0,1,1),-webkit-transform .25s cubic-bezier(.4,0,1,1);
     pointer-events: none;
-	background-color: ',self messageColor ,';';
+	background-color: ' , self messageColor , ';';
 		with: self messageString.
 	self wasShown: true
-	
-	
