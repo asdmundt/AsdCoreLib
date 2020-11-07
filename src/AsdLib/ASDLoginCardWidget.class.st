@@ -1,6 +1,6 @@
 Class {
 	#name : #ASDLoginCardWidget,
-	#superclass : #MDLLoginWidget,
+	#superclass : #ASDLoginWidget,
 	#category : #'AsdLib-Core'
 }
 
