@@ -61,12 +61,11 @@ ASDExternalFile class >> upLoadedFileName: aFileName [
 { #category : #accessing }
 ASDExternalFile >> contents [
 	| contents |
-	FileStream fileNamed: self filepath do: [ :stream |
-		stream binary.
-		contents := stream contents ].
-
+	 self filepath asFileReference
+		readStreamDo: [ :stream | 
+			
+			contents := stream upToEnd ].
 	^ contents
-
 ]
 
 { #category : #accessing }
