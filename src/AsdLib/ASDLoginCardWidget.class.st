@@ -1,8 +1,28 @@
 Class {
 	#name : #ASDLoginCardWidget,
 	#superclass : #ASDLoginWidget,
+	#instVars : [
+		'errorMessage'
+	],
 	#category : #'AsdLib-Core'
 }
+
+{ #category : #'instance creation' }
+ASDLoginCardWidget class >> erorMessage: aMessage [
+	^ self new
+	errorMessage: aMessage; 
+	 yourself
+]
+
+{ #category : #accessing }
+ASDLoginCardWidget >> errorMessage [
+	^ errorMessage
+]
+
+{ #category : #accessing }
+ASDLoginCardWidget >> errorMessage: anObject [
+	errorMessage := anObject
+]
 
 { #category : #initialization }
 ASDLoginCardWidget >> initialize [
