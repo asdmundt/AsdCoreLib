@@ -29,11 +29,11 @@ ASDFormCardDecoration >> label: anObject [
 { #category : #rendering }
 ASDFormCardDecoration >> renderCardContentOn: html [
 	html mdlCard
-		shadow: 2;
+		shadow: 1;
 		mdlTypographyTextLeft;
-		style: 'width: 100%; height: 100%;  background: #ffffff';
+		style: 'width: 100%; height: 100%;';
 		with: [ html mdlCardTitleContainer
-				style: 'color: #fff; background: #3E4EB8;';
+				
 				with: [ html mdlCardTitleText: self label level: 2 ].
 			html mdlCardTextContainer
 				with: [ "html mdlCardActions
