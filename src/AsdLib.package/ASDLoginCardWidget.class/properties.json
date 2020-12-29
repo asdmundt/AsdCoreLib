@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "ASDLoginWidget",
+	"category" : "AsdLib-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"errorMessage"
+	],
+	"name" : "ASDLoginCardWidget",
+	"type" : "normal"
+}

@@ -1,0 +1,22 @@
+{
+	"commentStamp" : "",
+	"super" : "MDLHighLevelWidget",
+	"category" : "AsdLib-Widget",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"titleLabel",
+		"titleLevel",
+		"loginLabel",
+		"passwordLabel",
+		"login",
+		"password",
+		"submitLabel",
+		"callback",
+		"cancelLabel",
+		"cancelCallback"
+	],
+	"name" : "ASDLoginWidget",
+	"type" : "normal"
+}

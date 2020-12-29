@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "MAElementComponent",
+	"category" : "AsdLib-Magritte",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "ASDMAExternalFileUploadComponent",
+	"type" : "normal"
+}
