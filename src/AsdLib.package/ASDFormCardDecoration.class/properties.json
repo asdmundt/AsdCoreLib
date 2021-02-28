@@ -6,7 +6,9 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"label"
+		"label",
+		"onClickJs",
+		"id"
 	],
 	"name" : "ASDFormCardDecoration",
 	"type" : "normal"

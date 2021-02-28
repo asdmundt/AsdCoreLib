@@ -1,0 +1,18 @@
+{
+	"commentStamp" : "",
+	"super" : "MDLHighLevelWidget",
+	"category" : "AsdLib-Widget",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"errorMessage",
+		"titleLabel",
+		"titleLevel",
+		"model",
+		"jsClickBlock",
+		"component"
+	],
+	"name" : "ASDFormCardWidget",
+	"type" : "normal"
+}

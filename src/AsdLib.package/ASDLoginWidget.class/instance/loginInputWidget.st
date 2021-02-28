@@ -2,6 +2,7 @@ rendering
 loginInputWidget
 	^ MDLTextFieldWidget new
 		beFloatingLabel;
-		on: #login of: self;
+		on: #benutzerName of: self;
 		label: loginLabel;
+		pattern: '^\S+$' errorMessage: 'kein leerstring';
 		yourself

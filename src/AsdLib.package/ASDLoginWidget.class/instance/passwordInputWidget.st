@@ -4,4 +4,6 @@ passwordInputWidget
 		type: 'password';
 		on: #password of: self;
 		label: passwordLabel;
+		
+		pattern: '^\S+$' errorMessage: 'kein leerstring';
 		yourself

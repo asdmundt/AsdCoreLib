@@ -1,3 +1,3 @@
 accessing
-login: anObject
+benutzerName: anObject
 	login := anObject
