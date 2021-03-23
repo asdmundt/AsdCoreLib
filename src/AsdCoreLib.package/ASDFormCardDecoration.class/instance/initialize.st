@@ -1,5 +1,0 @@
-initalize
-initialize
-
-	super initialize.
-	
