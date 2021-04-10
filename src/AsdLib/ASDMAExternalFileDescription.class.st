@@ -35,7 +35,9 @@ ASDMAExternalFileDescription >> acceptMagritte: aVisitor [
 
 { #category : #accessing }
 ASDMAExternalFileDescription >> defaultDirectory [
-	^ self propertyAt: #defaultDirectory ifAbsent: [ MAExternalFileModel baseDirectory ]
+	^ self
+		propertyAt: #defaultDirectory
+		ifAbsent: [ MAFileDatabase baseDirectory ]
 ]
 
 { #category : #accessing }

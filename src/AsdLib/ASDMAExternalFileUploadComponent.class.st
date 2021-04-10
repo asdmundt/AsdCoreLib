@@ -57,7 +57,7 @@ ASDMAExternalFileUploadComponent >> requiresMultipartForm [
 { #category : #actions }
 ASDMAExternalFileUploadComponent >> upload: file [
 	| stream destinationFilepath working |
-	working := FileSystem disk / 'var' / 'www' / 'html' / file fileName.
+	working := FileLocator imageDirectory / 'files' / file fileName.
 	stream := (File named: working asFileReference fullName) writeStream.
 	destinationFilepath := stream name.
 	[ stream

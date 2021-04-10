@@ -41,7 +41,7 @@ ASDFormCardDecoration >> renderCardContentOn: html [
 						mdlTypographyFontBold;
 						colored;
 						rippleEffect;
-						with: 'View Updates' ] " self renderNextOn: html ] ]
+						with: 'View Updates' ] " super  renderContentOn: html ] ]
 ]
 
 { #category : #rendering }
