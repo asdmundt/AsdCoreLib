@@ -40,7 +40,8 @@ ASDLoginCardWidget >> renderContentOn: html [
 	html
 		render:
 			(MDLCardWidget new
-				shadow: 1;
+				shadow: 2;
+				style: 'width: 400px;';
 				class: 'mdl-card__login-widget';
 				class:
 					(properties
