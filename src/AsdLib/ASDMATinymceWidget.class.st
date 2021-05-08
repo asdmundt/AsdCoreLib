@@ -1,15 +1,15 @@
 Class {
-	#name : #ASDMATinymceComponent,
-	#superclass : #MDLMATextAreaComponent,
+	#name : #ASDMATinymceWidget,
+	#superclass : #MDLTextAreaWidget,
 	#category : #'AsdLib-Components'
 }
 
 { #category : #rendering }
-ASDMATinymceComponent >> renderEditorOn: html [
-	super renderEditorOn: html.
+ASDMATinymceWidget >> renderContentOn: html [
+	super renderContentOn: html.
 	html
 		script:
-			' tinymce.init({selector:''textarea#' , self labelId
+			' tinymce.init({selector:''textarea#' , self id
 				,
 					' '',
 		height: 500,

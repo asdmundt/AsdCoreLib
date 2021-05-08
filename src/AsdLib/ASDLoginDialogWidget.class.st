@@ -1,6 +1,8 @@
 Class {
 	#name : #ASDLoginDialogWidget,
 	#superclass : #MDLLoginWidget,
+	#traits : 'TWithRootDialogComponent',
+	#classTraits : 'TWithRootDialogComponent classTrait',
 	#instVars : [
 		'closeId',
 		'openId',
@@ -47,7 +49,7 @@ ASDLoginDialogWidget >> renderCancelButtonOn: html [
 
 { #category : #rendering }
 ASDLoginDialogWidget >> renderContentOn: html [
-	self renderOpenButtonOn: html.
+	
 	self renderLoginDialogOn: html
 ]
 
