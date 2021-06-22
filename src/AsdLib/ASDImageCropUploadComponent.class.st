@@ -3,10 +3,17 @@ Class {
 	#superclass : #MDLHighLevelWidget,
 	#instVars : [
 		'imageData',
-		'fileName'
+		'fileName',
+		'model'
 	],
 	#category : #'AsdLib-Components'
 }
+
+{ #category : #'instance creation' }
+ASDImageCropUploadComponent class >> modelObject: anObject [ 
+^ self new 
+model: anObject
+]
 
 { #category : #accessing }
 ASDImageCropUploadComponent >> fileName [
@@ -28,6 +35,16 @@ ASDImageCropUploadComponent >> imageData: anObject [
 	imageData := anObject
 ]
 
+{ #category : #accessing }
+ASDImageCropUploadComponent >> model [
+	^ model
+]
+
+{ #category : #accessing }
+ASDImageCropUploadComponent >> model: anObject [
+	model := anObject
+]
+
 { #category : #rendering }
 ASDImageCropUploadComponent >> renderContentOn: html [
 	html form
@@ -42,8 +59,13 @@ ASDImageCropUploadComponent >> renderContentOn: html [
 				callback: [ :aString | self imageData: aString ].
 			html fileUpload
 				id: #file;
-				on: #upload of: self.
+				on: #saveFile of: self.
 			html submitButton text: 'upload' ]
+]
+
+{ #category : #actions }
+ASDImageCropUploadComponent >> saveFile: file [
+	self model:  self imageData
 ]
 
 { #category : #hooks }
