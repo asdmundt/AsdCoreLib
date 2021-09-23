@@ -3,8 +3,7 @@ Class {
 	#superclass : #MDLHighLevelWidget,
 	#instVars : [
 		'model',
-		'display',
-		'dom',
+		'withform',
 		'isAjax',
 		'callback',
 		'onClickBlock'
@@ -16,15 +15,14 @@ Class {
 ASDForm class >> withModel: aModel [
 	^ self new
 		model: aModel;
-		display: false
+		withForm: false
 ]
 
 { #category : #'instance creation' }
-ASDForm class >> withModel: aModel andDom: aDom [
+ASDForm class >> withModel: aModel andForm: aBoolean [
 	^ self new
 		model: aModel;
-		dom: aDom;
-		display: false
+		withForm: aBoolean
 ]
 
 { #category : #'instance creation' }
@@ -32,22 +30,8 @@ ASDForm class >> withModel: aModel andOnClickBlock: aBlock [
 	^ self new
 		model: aModel;
 		onClickBlock: aBlock;
-		isAjax: true
-]
-
-{ #category : #'instance creation' }
-ASDForm class >> withModel: aModel asDisplay: aBoolean [ 
-	^ self new
-		model: aModel;
-		display: aBoolean;
-		yourself
-]
-
-{ #category : #'instance creation' }
-ASDForm class >> withModel: aModel withAjax: aBoolean [
-	^ self new
-		model: aModel;
-		isAjax: aBoolean
+		isAjax: true;
+		withForm: true
 ]
 
 { #category : #accessing }
@@ -58,26 +42,6 @@ ASDForm >> callback [
 { #category : #accessing }
 ASDForm >> callback: anObject [
 	callback := anObject
-]
-
-{ #category : #accessing }
-ASDForm >> display [
-	^ display
-]
-
-{ #category : #accessing }
-ASDForm >> display: anObject [
-	display := anObject
-]
-
-{ #category : #accessing }
-ASDForm >> dom [
-	^ dom
-]
-
-{ #category : #accessing }
-ASDForm >> dom: anObject [
-	dom := anObject
 ]
 
 { #category : #initalize }
@@ -155,11 +119,12 @@ ASDForm >> renderButtonOn: html [
 
 { #category : #rendering }
 ASDForm >> renderContentOn: html [
-html form: [
-	self renderFieldsOn: html.
-	self isAjax
-		ifTrue: [ self renderAjaxButtonOn: html ]
-		ifFalse: [ self renderButtonOn: html ]]
+self withform ifTrue: [ html
+		form: [ self renderFieldsOn: html.
+			self isAjax
+				ifTrue: [ self renderAjaxButtonOn: html ]
+				ifFalse: [ self renderButtonOn: html ] ] ] ifFalse: [ self renderFieldsOn: html. ]
+	
 ]
 
 { #category : #rendering }
@@ -172,4 +137,14 @@ self subclassResponsibility
 ASDForm >> validateAndSave [
 	
 	self session model storeObject: self model
+]
+
+{ #category : #accessing }
+ASDForm >> withform [
+	^ withform
+]
+
+{ #category : #accessing }
+ASDForm >> withform: anObject [
+	withform := anObject
 ]
