@@ -48,6 +48,7 @@ ASDForm >> callback: anObject [
 ASDForm >> initialize [
 	super initialize.
 	self isAjax: false.
+	self withform: false.
 ]
 
 { #category : #accessing }
