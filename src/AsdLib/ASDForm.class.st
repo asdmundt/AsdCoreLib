@@ -6,7 +6,8 @@ Class {
 		'withform',
 		'isAjax',
 		'callback',
-		'onClickBlock'
+		'onClickBlock',
+		'withCard'
 	],
 	#category : #'AsdLib-Components'
 }
@@ -49,6 +50,7 @@ ASDForm >> initialize [
 	super initialize.
 	self isAjax: false.
 	self withform: false.
+	self withCard: false.
 ]
 
 { #category : #accessing }
@@ -138,6 +140,18 @@ self subclassResponsibility
 ASDForm >> validateAndSave [
 	
 	self session model storeObject: self model
+]
+
+{ #category : #accessing }
+ASDForm >> withCard [
+
+	^ withCard
+]
+
+{ #category : #accessing }
+ASDForm >> withCard: anObject [
+
+	withCard := anObject
 ]
 
 { #category : #accessing }
