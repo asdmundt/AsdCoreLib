@@ -26,6 +26,7 @@ ASDForm class >> withModel: aModel andDict: aDict [
 
 	^ self new
 		  model: aModel;
+			dict: aDict;
 		  withForm: false
 ]
 
