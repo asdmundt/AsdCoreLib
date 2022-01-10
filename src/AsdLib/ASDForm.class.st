@@ -7,7 +7,9 @@ Class {
 		'isAjax',
 		'callback',
 		'onClickBlock',
-		'withCard'
+		'withCard',
+		'labelAction',
+		'dict'
 	],
 	#category : #'AsdLib-Components'
 }
@@ -17,6 +19,14 @@ ASDForm class >> withModel: aModel [
 	^ self new
 		model: aModel;
 		withForm: false
+]
+
+{ #category : #'instance creation' }
+ASDForm class >> withModel: aModel andDict: aDict [
+
+	^ self new
+		  model: aModel;
+		  withForm: false
 ]
 
 { #category : #'instance creation' }
@@ -45,12 +55,26 @@ ASDForm >> callback: anObject [
 	callback := anObject
 ]
 
+{ #category : #accessing }
+ASDForm >> dict [
+
+	^ dict
+]
+
+{ #category : #accessing }
+ASDForm >> dict: anObject [
+
+	dict := anObject
+]
+
 { #category : #initalize }
 ASDForm >> initialize [
+
 	super initialize.
 	self isAjax: false.
 	self withform: false.
 	self withCard: false.
+	self model isNil ifTrue: [ self labelAction: 'anlegen'] ifFalse: [ self labelAction: 'bearbeiten' ]
 ]
 
 { #category : #accessing }
@@ -61,6 +85,18 @@ ASDForm >> isAjax [
 { #category : #accessing }
 ASDForm >> isAjax: anObject [
 	isAjax := anObject
+]
+
+{ #category : #accessing }
+ASDForm >> labelAction [
+
+	^ labelAction
+]
+
+{ #category : #accessing }
+ASDForm >> labelAction: anObject [
+
+	labelAction := anObject
 ]
 
 { #category : #accessing }

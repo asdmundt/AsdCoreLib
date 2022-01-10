@@ -60,11 +60,12 @@ ASDMessageComponent >> messageType: anObject [
 { #category : #'as yet unclassified' }
 ASDMessageComponent >> renderContentOn: html [
 
- self wasShown ifTrue: [^ self].
- html div
-  class: self messageType, 'Message';
-  with: [self messageString].
- self wasShown: true.
+	self wasShown ifTrue: [ ^ self ].
+	html div
+	style: 'width: 256px; height: 256px; ';
+		class: self messageType , 'Message message';
+		with: [ self messageString ].
+	self wasShown: true
 ]
 
 { #category : #accessing }
