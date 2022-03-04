@@ -16,9 +16,11 @@ Class {
 
 { #category : #'instance creation' }
 ASDForm class >> withModel: aModel [
+
 	^ self new
-		model: aModel;
-		withForm: false
+		  model: aModel;
+		  withform: false;
+			yourself 
 ]
 
 { #category : #'instance creation' }
@@ -32,9 +34,11 @@ ASDForm class >> withModel: aModel andDict: aDict [
 
 { #category : #'instance creation' }
 ASDForm class >> withModel: aModel andForm: aBoolean [
+
 	^ self new
-		model: aModel;
-		withForm: aBoolean
+		  model: aModel;
+		  withform: aBoolean;
+		yourself 
 ]
 
 { #category : #'instance creation' }
