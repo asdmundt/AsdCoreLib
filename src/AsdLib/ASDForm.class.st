@@ -21,7 +21,8 @@ ASDForm class >> withModel: aModel [
 	^ self new
 		  model: aModel;
 		  withform: false;
-			yourself 
+		 withPanel: false;
+		  yourself
 ]
 
 { #category : #'instance creation' }
@@ -49,6 +50,16 @@ ASDForm class >> withModel: aModel andOnClickBlock: aBlock [
 		onClickBlock: aBlock;
 		isAjax: true;
 		withForm: true
+]
+
+{ #category : #'instance creation' }
+ASDForm class >> withModel: aModel andPanel: aBoolean [
+
+	^ self new
+		  model: aModel;
+		  withform: false;
+		  withPanel: aBoolean;
+		 yourself
 ]
 
 { #category : #accessing }
