@@ -9,7 +9,8 @@ Class {
 		'onClickBlock',
 		'withCard',
 		'labelAction',
-		'dict'
+		'dict',
+		'withPanel'
 	],
 	#category : #'AsdLib-Components'
 }
@@ -79,7 +80,10 @@ ASDForm >> initialize [
 	self isAjax: false.
 	self withform: false.
 	self withCard: false.
-	self model isNil ifTrue: [ self labelAction: 'anlegen'] ifFalse: [ self labelAction: 'bearbeiten' ]
+	self withPanel: false.
+	self model isNil
+		ifTrue: [ self labelAction: 'anlegen' ]
+		ifFalse: [ self labelAction: 'bearbeiten' ]
 ]
 
 { #category : #accessing }
@@ -193,6 +197,18 @@ ASDForm >> withCard [
 ASDForm >> withCard: anObject [
 
 	withCard := anObject
+]
+
+{ #category : #accessing }
+ASDForm >> withPanel [
+
+	^ withPanel
+]
+
+{ #category : #accessing }
+ASDForm >> withPanel: anObject [
+
+	withPanel := anObject
 ]
 
 { #category : #accessing }
