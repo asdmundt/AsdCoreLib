@@ -10,7 +10,8 @@ Class {
 		'withCard',
 		'labelAction',
 		'dict',
-		'withPanel'
+		'withPanel',
+		'labelSelf'
 	],
 	#category : #'AsdLib-Components'
 }
@@ -117,6 +118,18 @@ ASDForm >> labelAction [
 ASDForm >> labelAction: anObject [
 
 	labelAction := anObject
+]
+
+{ #category : #accessing }
+ASDForm >> labelSelf [
+
+	^ labelSelf
+]
+
+{ #category : #accessing }
+ASDForm >> labelSelf: anObject [
+
+	labelSelf := anObject
 ]
 
 { #category : #accessing }
