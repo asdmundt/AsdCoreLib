@@ -62,7 +62,7 @@ ASDMessageComponent >> renderContentOn: html [
 
 	self wasShown ifTrue: [ ^ self ].
 	html div
-	style: 'width: 256px; height: 256px; ';
+		style: 'width: 340px; height: 256px; ';
 		class: self messageType , 'Message message';
 		with: [ self messageString ].
 	self wasShown: true
