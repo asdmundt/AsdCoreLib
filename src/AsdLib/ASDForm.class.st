@@ -93,9 +93,7 @@ ASDForm >> initialize [
 	self withform: false.
 	self withCard: false.
 	self withPanel: false.
-	self model isNil
-		ifTrue: [ self labelAction: 'anlegen' ]
-		ifFalse: [ self labelAction: 'bearbeiten' ]
+	
 ]
 
 { #category : #accessing }
