@@ -59,11 +59,12 @@ ASDLoginWidget >> login: anObject [
 
 { #category : #rendering }
 ASDLoginWidget >> loginInputWidget [
+
 	^ MDLTextFieldWidget new
-		beFloatingLabel;
-		on: #login of: self;
-		label: loginLabel;
-		yourself
+		  on: #login of: self;
+		style: 'width: 200px';
+		  label: loginLabel;
+		  yourself
 ]
 
 { #category : #accessing }
@@ -83,11 +84,13 @@ ASDLoginWidget >> password: anObject [
 
 { #category : #rendering }
 ASDLoginWidget >> passwordInputWidget [
-	^ MDLTextFieldWidget new beFloatingLabel
-		type: 'password';
-		on: #password of: self;
-		label: passwordLabel;
-		yourself
+
+	^ MDLTextFieldWidget new
+		  type: 'password';
+		  on: #password of: self;
+		style: 'width: 200px';
+		  label: passwordLabel;
+		  yourself
 ]
 
 { #category : #accessing }
@@ -124,6 +127,22 @@ ASDLoginWidget >> renderSubmitButtonOn: html [
 		beSubmit;
 		callback: [ callback value: login value: password ];
 		with: submitLabel
+]
+
+{ #category : #rendering }
+ASDLoginWidget >> renderloginInputWidget: html [
+
+	html mdlTextFieldContainer
+		style: 'width: 200px';
+		with: [ 
+			html mdlTextFieldLabel
+				for: html nextId;
+				with: loginLabel.
+			html mdlTextFieldInput
+				id: html lastId;
+				style: 'width: 200px';
+				value: self login;
+				callback: [ :aString | self login: aString ] ]
 ]
 
 { #category : #accessing }
