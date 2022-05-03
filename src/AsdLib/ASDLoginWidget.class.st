@@ -100,8 +100,11 @@ ASDLoginWidget >> passwordLabel: anObject [
 
 { #category : #rendering }
 ASDLoginWidget >> renderCancelButtonOn: html [
+
 	html anchor
 		class: 'mdl-button mdl-js-button mdl-button--raised';
+		style:
+			'border: 1px solid #30363d; border-radius: 2px; color: color: #ffffff8a !important; margin: 0 10px 0 10px;';
 		callback: self cancelCallback;
 		with: cancelLabel
 ]
@@ -121,8 +124,11 @@ ASDLoginWidget >> renderFieldsOn: html [
 
 { #category : #rendering }
 ASDLoginWidget >> renderSubmitButtonOn: html [
+
 	html mdlButton
-		raised;
+		style:
+			'border: 1px solid #30363d; border-radius: 2px; color: color: #ffffff8a !important; margin: 0 10px 0 10px;';
+				raised;
 		accentColor;
 		beSubmit;
 		callback: [ callback value: login value: password ];
