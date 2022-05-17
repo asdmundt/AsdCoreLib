@@ -16,6 +16,12 @@ Class {
 	#category : #'AsdLib-Components'
 }
 
+{ #category : #accessing }
+ASDForm class >> componentTitle [
+
+	^ self subclassResponsibility
+]
+
 { #category : #'instance creation' }
 ASDForm class >> withModel: aModel [
 
