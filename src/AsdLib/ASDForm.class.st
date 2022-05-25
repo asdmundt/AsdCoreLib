@@ -99,7 +99,7 @@ ASDForm >> initialize [
 	self withform: false.
 	self withCard: false.
 	self withPanel: false.
-	
+	self labelSelf: self class componentTitle.
 ]
 
 { #category : #accessing }
@@ -176,9 +176,11 @@ ASDForm >> renderAjaxButtonOn: html [
 
 { #category : #rendering }
 ASDForm >> renderButtonOn: html [
+
 	html div
 		class: 'mdl-typography--text-right';
-		with: [ html mdlButton
+		with: [ 
+			html mdlButton
 				raised;
 				rippleEffect;
 				beSubmit;
@@ -189,7 +191,7 @@ ASDForm >> renderButtonOn: html [
 				raised;
 				primaryColor;
 				beSubmit;
-				callback: [ callback value: model ];
+				callback: [ self answer: self model ];
 				with: 'ok' ]
 ]
 
