@@ -2,7 +2,6 @@ Class {
 	#name : #ASDMDLReport,
 	#superclass : #MDLMAReport,
 	#instVars : [
-		'planer',
 		'title'
 	],
 	#category : #'AsdLib-Magritte'
@@ -13,6 +12,18 @@ ASDMDLReport class >> displayName [
 	self subclassResponsibility
 ]
 
+{ #category : #actions }
+ASDMDLReport >> add [
+
+	self subclassResponsibility
+]
+
+{ #category : #actions }
+ASDMDLReport >> edit: anObject [
+
+	self subclassResponsibility
+]
+
 { #category : #initialization }
 ASDMDLReport >> initialize [
 
@@ -20,20 +31,16 @@ ASDMDLReport >> initialize [
 	self showBatch: true
 ]
 
-{ #category : #accessing }
-ASDMDLReport >> planer [
-	^ planer
-]
-
-{ #category : #accessing }
-ASDMDLReport >> planer: anObject [
-	planer := anObject
-]
-
 { #category : #actions }
 ASDMDLReport >> refreshReportFromObject: aClass [
 	self rows: aClass selectAll.
 	self refresh
+]
+
+{ #category : #actions }
+ASDMDLReport >> remove: anObject [
+
+	self subclassResponsibility
 ]
 
 { #category : #rendering }
@@ -75,4 +82,10 @@ ASDMDLReport >> title [
 { #category : #accessing }
 ASDMDLReport >> title: anObject [
 	title := anObject
+]
+
+{ #category : #actions }
+ASDMDLReport >> view: anObject [
+
+	self subclassResponsibility
 ]
