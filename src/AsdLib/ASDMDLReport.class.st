@@ -12,23 +12,13 @@ ASDMDLReport class >> displayName [
 	self subclassResponsibility
 ]
 
-{ #category : #actions }
-ASDMDLReport >> add [
-
-	self subclassResponsibility
-]
-
-{ #category : #actions }
-ASDMDLReport >> edit: anObject [
-
-	self subclassResponsibility
-]
-
 { #category : #initialization }
 ASDMDLReport >> initialize [
 
 	super initialize.
-	self showBatch: true
+	self showBatch: true.
+	self bordered: true.
+	self striped: true
 ]
 
 { #category : #actions }
@@ -82,10 +72,4 @@ ASDMDLReport >> title [
 { #category : #accessing }
 ASDMDLReport >> title: anObject [
 	title := anObject
-]
-
-{ #category : #actions }
-ASDMDLReport >> view: anObject [
-
-	self subclassResponsibility
 ]
