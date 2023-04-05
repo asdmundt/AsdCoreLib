@@ -3,7 +3,7 @@ MessageComonente um aktionen mitzuteilen
 "
 Class {
 	#name : #ASDMessageComponent,
-	#superclass : #WAComponent,
+	#superclass : #MDLHighLevelWidget,
 	#instVars : [
 		'messageString',
 		'messageType',
