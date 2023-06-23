@@ -121,8 +121,7 @@ ASDModel >> pathString: anObject [
 
 { #category : #accessing }
 ASDModel >> states [
-
-	^ states
+	^ self class states
 ]
 
 { #category : #accessing }
