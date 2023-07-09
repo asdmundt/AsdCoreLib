@@ -52,3 +52,22 @@ ASDLoginCardWidget >> renderContentOn: html [
 				addTextContainer: [ :canvas | super renderContentOn: canvas ];
 				yourself)
 ]
+
+{ #category : #hooks }
+ASDLoginCardWidget >> style [
+
+	^ '.mdl-card__login-widget{
+    background-color: rgb(22, 27, 34);
+    box-shadow: rgb(48 54 61) 0px 0px 0px 1px, rgb(1 4 9 / 85%) 0px 16px 32px;
+    position: absolute;
+    min-width: 192px;
+    max-width: 640px;
+    height: auto;
+    width: 256px;
+    border-radius: 12px;
+    overflow: hidden auto;
+    animation: 200ms cubic-bezier(0.33, 1, 0.68, 1) 0s 1 normal none running overlay-appear;
+    visibility: var(--styled-overlay-visibility);
+    max-height: 55vh;
+}'
+]
