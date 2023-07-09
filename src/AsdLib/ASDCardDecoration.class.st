@@ -41,11 +41,10 @@ ASDCardDecoration >> renderContentOn: html [
 	html render: (MDLCardWidget new
 				 shadow: 2;
 				 style: 'width: 400px;';
-				 class: 'mdl-card__login-widget';
-				 
+				 class: 'mdl-card__decoration';
 				 title: titleLabel level: titleLevel;
 				 addTextContainer: [ :canvas | self renderNextOn: canvas ];
-				 yourself)
+				 yourself).
 ]
 
 { #category : #accessing }
