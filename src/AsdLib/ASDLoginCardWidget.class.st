@@ -26,13 +26,15 @@ ASDLoginCardWidget >> errorMessage: anObject [
 
 { #category : #initialization }
 ASDLoginCardWidget >> initialize [
+
 	super initialize.
 	titleLabel := 'Bitte hier Einloggen'.
 	titleLevel := 2.
 	loginLabel := 'BenutzerName'.
 	cancelLabel := 'abbrechen'.
 	passwordLabel := 'Passwort'.
-	submitLabel := 'weiter'
+	submitLabel := 'weiter'.
+	errorMessage := 'Zugangsdaten ungültig'
 ]
 
 { #category : #rendering }

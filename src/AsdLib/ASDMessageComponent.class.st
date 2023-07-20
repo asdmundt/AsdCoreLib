@@ -12,6 +12,14 @@ Class {
 	#category : #'AsdLib-Components'
 }
 
+{ #category : #voyage }
+ASDMessageComponent class >> isVoyageRoot [
+	"Indicates that instances of this class are top level documents
+    in noSQL databases"
+
+	^ true
+]
+
 { #category : #'as yet unclassified' }
 ASDMessageComponent >> errorMessage: aString [
 
@@ -62,7 +70,7 @@ ASDMessageComponent >> renderContentOn: html [
 
 	self wasShown ifTrue: [ ^ self ].
 	html div
-		style: 'width: 340px; height: 256px; ';
+		style: 'width: 340px; height: 350px; ';
 		class: self messageType , 'Message message';
 		with: [ self messageString ].
 	self wasShown: true
