@@ -14,6 +14,11 @@ ASDComponentWithRightPanel class >> withComponent: aComponent [
 		  yourself
 ]
 
+{ #category : #hooks }
+ASDComponentWithRightPanel >> children [
+	^ Array with: self component 
+]
+
 { #category : #accessing }
 ASDComponentWithRightPanel >> component [
 
