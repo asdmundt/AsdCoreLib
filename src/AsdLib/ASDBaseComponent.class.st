@@ -26,8 +26,13 @@ ASDBaseComponent >> add [
 
 	| model |
 	model := self call: (modelList first asComponent
-			           addValidatedForm;
-			           yourself).
+			          addDecoration:
+			(ASDFormCardDecoration
+				buttons:
+					{(#save -> 'OK').
+					(#cancel -> 'Abbrechen')});
+		addValidation;
+		yourself).
 	model isNil ifFalse: [ 
 		self modelList add: model.
 		self report refresh ]
@@ -46,7 +51,14 @@ ASDBaseComponent >> clear [
 { #category : #actions }
 ASDBaseComponent >> editModel: aModel [
 
-	self call: (aModel asComponent addValidatedForm; yourself)
+	self call: (aModel asComponent
+			 addDecoration:
+			(ASDFormCardDecoration
+				buttons:
+					{(#save -> 'OK').
+					(#cancel -> 'Abbrechen')});
+		addValidation;
+		yourself)
 ]
 
 { #category : #hooks }
@@ -111,8 +123,9 @@ ASDBaseComponent >> report: anObject [
 
 { #category : #actions }
 ASDBaseComponent >> viewModel: aModel [
-    self call: (aModel asComponent
-        addForm: #(cancel);
-        readonly: true;
-        yourself)
+
+	self call: (aModel asComponent
+			 addDecoration: (ASDFormCardDecoration buttons: {(#cancel -> 'zurück')});
+			 readonly: true;
+			 yourself)
 ]
