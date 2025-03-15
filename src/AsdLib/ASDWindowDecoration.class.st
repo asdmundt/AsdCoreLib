@@ -43,10 +43,20 @@ ASDWindowDecoration >> renderContentOn: html [
 ]
 
 { #category : #css }
-ASDWindowDecoration >> style [ 
-^'.window {
-    margin: 1em;
-    border: 1px solid #aaa;
+ASDWindowDecoration >> style [
+
+	^ '.window {
+    
+    border: 1px solid #3d444d;
+display: block; 
+height: 100%; 
+margin: 0px 0px 0px 0px; 
+padding-left: 5px;
+position:absolute; 
+z-index:10; 
+left:10px; 
+top:10px; 
+width:100%;
 }
 
 .window .window-titlebar {
@@ -54,7 +64,7 @@ ASDWindowDecoration >> style [
     padding: 5px;
     overflow: hidden;
     background-color: #eee;
-    border-bottom: 1px solid #aaa;
+    border-bottom: 1px solid #3d444d;
 }
 
 .window .window-titlebar .window-title {
@@ -79,7 +89,7 @@ ASDWindowDecoration >> style [
 .window .window-content {
     clear: both;
     padding: 2px;
-    background-color: #fff;
+    background-color: #212830;
 }
 '
 ]
