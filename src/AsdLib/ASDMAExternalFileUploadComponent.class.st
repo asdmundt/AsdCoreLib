@@ -30,18 +30,22 @@ ASDMAExternalFileUploadComponent >> renderEditorOn: html [
 
 { #category : #rendering }
 ASDMAExternalFileUploadComponent >> renderRemoveOn: html [
+
 	html render: self value.
-	html text: ' ('; render: self value filesize asFileSize; text: ') '.
-	html submitButton on: #remove of: self
+	html
+		text: ' (';
+		render: self value filesize asFileSize;
+		text: ') '.
+	html mdlButton on: #remove of: self
 ]
 
 { #category : #rendering }
 ASDMAExternalFileUploadComponent >> renderUploadOn: html [
+
 	html fileUpload
 		id: self labelId;
 		on: #upload of: self.
-	html submitButton
-		text: 'upload'
+	html mdlButton text: 'upload'
 ]
 
 { #category : #rendering }
