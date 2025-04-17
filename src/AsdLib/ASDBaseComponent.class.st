@@ -3,7 +3,8 @@ Class {
 	#superclass : #MDLWidget,
 	#instVars : [
 		'modelList',
-		'report'
+		'report',
+		'model'
 	],
 	#category : #'AsdLib-Components'
 }
@@ -79,13 +80,26 @@ self subclassResponsibility
 ASDBaseComponent >> initialize [
 
 	super initialize.
+	self model: self modelList first.
 	self report: (ASDMDLReport
 			 rows: self modelList
-			 description: (self filteredDescriptionsFrom: self modelList first)).
+			 description: (self filteredDescriptionsFrom: self model)).
 	self report addColumn: (MACommandColumn new
 			 addCommandOn: self selector: #viewModel: text: 'Ansehen';
 			 addCommandOn: self selector: #editModel: text: 'Bearbeiten';
 			 yourself)
+]
+
+{ #category : #accessing }
+ASDBaseComponent >> model [
+
+	^ model
+]
+
+{ #category : #accessing }
+ASDBaseComponent >> model: anObject [
+
+	model := anObject
 ]
 
 { #category : #accessing }
