@@ -34,7 +34,7 @@ ASDLoginCardWidget >> initialize [
 	cancelLabel := 'abbrechen'.
 	passwordLabel := 'Passwort'.
 	submitLabel := 'weiter'.
-	errorMessage := 'Zugangsdaten ungültig'
+	errorMessage := ''
 ]
 
 { #category : #rendering }

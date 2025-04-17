@@ -26,6 +26,15 @@ ASDModel class >> bez: aString [
 yourself 
 ]
 
+{ #category : #voyage }
+ASDModel class >> isVoyageRoot [
+
+	"Indicates that instances of this class are top level documents
+    in noSQL databases"
+
+	^ true
+]
+
 { #category : #accessing }
 ASDModel class >> states [
 
@@ -97,7 +106,7 @@ ASDModel >> initialize [
 	super initialize.
 	self task: OrderedCollection new.
 	self id: UUID new.
-	self  stepIndex: 0.
+	self stepIndex: 0.
 	self currentStepIndex: 0.
 	self status: 'new'
 ]

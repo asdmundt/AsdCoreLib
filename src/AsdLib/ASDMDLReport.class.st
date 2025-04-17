@@ -17,8 +17,7 @@ ASDMDLReport >> initialize [
 
 	super initialize.
 	self showBatch: true.
-	self bordered: true.
-	self striped: true
+
 ]
 
 { #category : #actions }
