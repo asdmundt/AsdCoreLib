@@ -10,33 +10,17 @@ Class {
 }
 
 { #category : #'instance creation' }
-ASDBaseComponent class >> withModel: aModel [
-
-	^ self new model: aModel; yourself 
-]
-
-{ #category : #'instance creation' }
 ASDBaseComponent class >> withModelList: aList [
+
 	^ self new
-		  modelList: aList;
-		  yourself
+		  modelList: aList
+		  
 ]
 
 { #category : #actions }
 ASDBaseComponent >> add [
 
-	| model |
-	model := self call: (modelList first asComponent
-			          addDecoration:
-			(ASDFormCardDecoration
-				buttons:
-					{(#save -> 'OK').
-					(#cancel -> 'Abbrechen')});
-		addValidation;
-		yourself).
-	model isNil ifFalse: [ 
-		self modelList add: model.
-		self report refresh ]
+self subclassResponsibility
 ]
 
 { #category : #hooks }
@@ -52,14 +36,7 @@ ASDBaseComponent >> clear [
 { #category : #actions }
 ASDBaseComponent >> editModel: aModel [
 
-	self call: (aModel asComponent
-			 addDecoration:
-			(ASDFormCardDecoration
-				buttons:
-					{(#save -> 'OK').
-					(#cancel -> 'Abbrechen')});
-		addValidation;
-		yourself)
+self subclassResponsibility
 ]
 
 { #category : #hooks }
@@ -80,7 +57,11 @@ self subclassResponsibility
 ASDBaseComponent >> initialize [
 
 	super initialize.
-	self model: self modelList first.
+
+]
+
+{ #category : #initialization }
+ASDBaseComponent >> initializeReport [
 	self report: (ASDMDLReport
 			 rows: self modelList
 			 description: (self filteredDescriptionsFrom: self model)).
@@ -116,11 +97,19 @@ ASDBaseComponent >> modelList: anObject [
 
 { #category : #rendering }
 ASDBaseComponent >> renderContentOn: html [
+self modelList size < 1 ifTrue: [ 
+	html heading: 'Hinzufügen'.
+	#( add  )
+		do: [ :symbol | html anchor on: symbol of: self ]
+		separatedBy: [ html space ].
+	 ] ifFalse: [ 
 	html heading: 'Übersicht'.
 	#( add filter clear )
 		do: [ :symbol | html anchor on: symbol of: self ]
 		separatedBy: [ html space ].
 	html render: self report
+	 ]
+	
 ]
 
 { #category : #accessing }

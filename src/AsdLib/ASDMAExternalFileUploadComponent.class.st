@@ -46,7 +46,8 @@ ASDMAExternalFileUploadComponent >> renderUploadOn: html [
 
 { #category : #rendering }
 ASDMAExternalFileUploadComponent >> renderViewerOn: html [
-	html render: self value,'test'
+
+	html render: self value 
 ]
 
 { #category : #testing }
